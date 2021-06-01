@@ -26,6 +26,7 @@ body {
     height: 100%;
     margin: 0;
     font-family: 'Odibee Sans', cursive;
+    background: linear-gradient(to bottom, #153925 30%, #242424);
 }
 
 h1 {
@@ -36,7 +37,14 @@ p {
     font-size: 2.0em;
 }
 
-h1, p {
+a {
+    font-size: 1.0em;
+    color: inherit;
+    margin: 0 5% 20px 5%;
+    display: inline-block;
+}
+
+h1, p, .main div {
     display: block;
     width: 90%;
     margin: 0 5% 50px 5%;
@@ -45,6 +53,12 @@ h1, p {
 
 iframe {
     max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 .header {
@@ -59,8 +73,6 @@ iframe {
 .header img {
     position: absolute;
 }
-
-
 
 .fin {
     animation: FinUpDown 23s linear infinite;
@@ -110,8 +122,8 @@ iframe {
 
 .main {
     background-color: #242424;
-    width: 80%;
-    margin: 0 10% 10% 10%;
+    width: 55%;
+    margin: 0 22.5% 10% 22.5%;
     padding-top: 50px;
     border-radius: 25px;
     display: flex;
@@ -121,9 +133,16 @@ iframe {
     align-content: flex-start;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .main {
-    width: 60%;
-    margin-left: 0 20% 0 20%;
+    width: 80%;
+    margin: 0 10% 10% 10%;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .main {
+    width: 40%;
+    margin: 0 30% 10% 30%;
   }
 }
