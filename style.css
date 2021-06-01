@@ -1,0 +1,129 @@
+/* Color palette from light to dark
+ * #C2E6B7
+ * #9AC288
+ * #8EB67E
+ * #1F3B32
+ * #172E27
+ * #153925
+ *
+ * Grayscale colors
+ * #3E3E3E
+ * #242424
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #153925;
+    color: #9AC288;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Odibee Sans', cursive;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+p {
+    font-size: 2.0em;
+}
+
+h1, p {
+    display: block;
+    width: 90%;
+    margin: 0 5% 50px 5%;
+    align-items: center;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.header {
+    height: 20%;
+    background-color: #9AC288;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #9AC288, transparent 100%)
+}
+
+.header img {
+    position: absolute;
+}
+
+
+
+.fin {
+    animation: FinUpDown 23s linear infinite;
+    height: 75%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    transform: scaleX(-1);
+}
+
+@keyframes FinUpDown {
+    0%, 100% { bottom: 10%; }
+    50% { bottom: 20%; }
+}
+
+.waves1, .waves2, .waves3 {
+    width: 120%;
+    height: 100%;
+}
+
+.waves1 {
+    left: 0;
+}
+
+.waves2 {
+    left: -13%;
+    bottom: -15px;
+    animation: Waves2UpDown 13s linear infinite;
+}
+
+.waves3 {
+    left: -7%;
+    bottom: -30px;
+    animation: Waves3UpDown 19s linear infinite;
+}
+
+@keyframes Waves2UpDown {
+    0%, 100% { bottom: -15px; }
+    50% { bottom: 0px; }
+}
+
+@keyframes Waves3UpDown {
+    0%, 100% { bottom: -30px; }
+    50% { bottom: -15px; }
+}
+
+.main {
+    background-color: #242424;
+    width: 80%;
+    margin: 0 10% 10% 10%;
+    padding-top: 50px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    width: 60%;
+    margin-left: 0 20% 0 20%;
+  }
+}
