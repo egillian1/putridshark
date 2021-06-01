@@ -82,7 +82,7 @@ iframe {
 }
 
 .fin {
-    animation: FinUpDown 23s linear infinite;
+    animation: FinUpDown 23s linear infinite, FadeIn 10s ease-out;
     height: 75%;
     margin: auto;
     left: 0;
@@ -117,18 +117,6 @@ iframe {
     animation: Waves3UpDown 19s linear infinite;
 }
 
-/*
-@keyframes Waves2UpDown {
-    0%, 100% { bottom: -15px; }
-    50% { bottom: 0px; }
-}
-
-@keyframes Waves3UpDown {
-    0%, 100% { bottom: -30px; }
-    50% { bottom: -15px; }
-}
-*/
-
 @keyframes Waves2UpDown {
     0%, 100% { transform: translateY(-15px); }
     50% { transform: translateY(0px); }
@@ -151,16 +139,12 @@ iframe {
     align-items: flex-start;
     align-content: flex-start;
     animation-delay: 1s;
-    animation: RiseUp 0.5s ease-out;
+    animation: FadeIn 2.5s ease-out;
 }
 
-@keyframes RiseUp {
-    /*
-    0% { margin-top: 40%;}
-    100% { margin-top: 0;}
-    */
-    0% { transform: translateY(30%); }
-    100% { transform: translateY(0); }
+@keyframes FadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 
